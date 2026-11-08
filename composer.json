@@ -1,0 +1,53 @@
+{
+    "name": "youvision/think-idcard",
+    "description": "ThinkPHP 8 身份证号码解析包，通过内置全国省市区行政区划数据解析户籍地址、性别、出生日期、年龄并校验身份证号码。",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "thinkphp",
+        "thinkphp8",
+        "idcard",
+        "id-card",
+
+        "身份证",
+        "身份证解析"
+    ],
+    "authors": [
+        {
+            "name": "youvision"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "topthink/framework": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6 || ^10.5 || ^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Youvision\\ThinkIdcard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Youvision\\ThinkIdcard\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "Youvision\\ThinkIdcard\\Service"
+            ],
+            "config": {
+                "idcard": "config/idcard.php"
+            }
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
